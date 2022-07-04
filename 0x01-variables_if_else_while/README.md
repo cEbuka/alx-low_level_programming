@@ -4,3 +4,6 @@
 
 2-print_alphabet.c:Write a program that prints the alphabet in lowercase, followed by a new line.
 
+3-print_alphabets.c: Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+
+
