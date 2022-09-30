@@ -16,9 +16,9 @@ int main(int argc, char *argv[])
 	i = 1;
 	if (argc > 1)
 	{
-		while(i < argc)
+		while (i < argc)
 		{
-			if (!atoi(argv[i]))
+			if ((atoi(argv[i])) == 0)
 			{
 				printf("%s\n", "Error");
 				exit(EXIT_FAILURE);
