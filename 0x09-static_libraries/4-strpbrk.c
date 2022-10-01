@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strbrk - in progress
+ * _strpbrk - in progress
  * @s:string
  * @accept: unknown
  *

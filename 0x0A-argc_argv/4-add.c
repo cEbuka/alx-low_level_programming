@@ -10,21 +10,23 @@
 
 int main(int argc, char *argv[])
 {
-	int i, result;
+	int i, j, result;
 
 	result = 0;
 	i = 1;
+	j = 0;
 	if (argc > 1)
 	{
 		while (i < argc)
 		{
-			if ((atoi(argv[i])) == 0)
+			if (atoi(*(argv[i][j])) == 0)
 			{
 				printf("%s\n", "Error");
 				exit(EXIT_FAILURE);
 			}
 			result += atoi(argv[i]);
 					i++;
+					j++;
 		}
 		printf("%d\n", result);
 	}

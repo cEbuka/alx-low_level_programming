@@ -211,11 +211,11 @@ unsigned int _strspn(char *s, char *accept)
 int _isalpha(int c)
 {
 }
-4-strpbrk.c/    0           0     0     644     145       `
+4-strpbrk.c/    0           0     0     644     146       `
 #include "main.h"
 
 /**
- * _strbrk - in progress
+ * _strpbrk - in progress
  * @s:string
  * @accept: unknown
  *
@@ -225,7 +225,6 @@ int _isalpha(int c)
 char *_strpbrk(char *s, char *accept)
 {
 }
-
 5-strstr.c/     0           0     0     644     165       `
 #include "main.h"
 
