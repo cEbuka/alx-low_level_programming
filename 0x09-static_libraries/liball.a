@@ -279,14 +279,3 @@ _putchar.c/     0           0     0     644     220       `
 int _putchar(char c)
 {
 }
-main.c/         0           0     0     644     80        `
-#include "main.h"
-
-/**
- * main - test the functions
- *
- */
-
-void main(void)
-{
-}
