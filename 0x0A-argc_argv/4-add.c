@@ -1,36 +1,34 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 /**
- * main - adds positive numbers
- * @argc: length of @argv
- * @argv: args
- *
- * Return: 0 if successful else -1
- */
+* main - adds numbers
+* @argc: number of arguments passed to the function
+* @argv: argument vector of pointers to strings
+*
+* Return: 0 if no errors, else 1
+*/
 
 int main(int argc, char *argv[])
 {
-	int i, j, result;
+	int a = 0, i, j;
 
-	result = 0;
-	i = 1;
-	j = 0;
-	if (argc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		while (i < argc)
+		for (j = 0; argv[i][j]; j++)
 		{
-			if (atoi(*(argv[i][j])) == 0)
+			if (isdigit(argv[i][j]) == 0)
 			{
-				printf("%s\n", "Error");
-				exit(EXIT_FAILURE);
+				puts("Error");
+				return (1);
 			}
-			result += atoi(argv[i]);
-					i++;
-					j++;
 		}
-		printf("%d\n", result);
 	}
-	else
-		printf("%d\n", 0);
-	exit(EXIT_SUCCESS);
+	for (i = 1; i < argc; i++)
+	{
+		a += atoi(argv[i]);
+	}
+	printf("%d\n", a);
+	return (0);
 }
