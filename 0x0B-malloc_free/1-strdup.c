@@ -21,7 +21,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	/* allocate memory for newStr */
-	newStr = malloc(sizeof(str) * len + 1);
+	newStr = malloc(sizeof(char) * len + 1);
 	/* check if newStr is null */
 	if (newStr == NULL)
 		return (NULL);
@@ -31,7 +31,6 @@ char *_strdup(char *str)
 		*(newStr + i) = *(str + i);
 		i++;
 	}
-	
 	/*return newStr*/
 	return (newStr);
 }
