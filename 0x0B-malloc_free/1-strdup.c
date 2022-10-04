@@ -15,11 +15,10 @@ char *_strdup(char *str)
 
 	len = 1;
 	i = 0;
-	while (str[len])
-		len++;
-	/*check if str is null*/
 	if (str == NULL)
 		return (NULL);
+	while (str[len])
+		len++;
 	/* allocate memory for newStr */
 	newStr = malloc(sizeof(char) * len + 1);
 	/* check if newStr is null */
@@ -31,7 +30,6 @@ char *_strdup(char *str)
 		*(newStr + i) = *(str + i);
 		i++;
 	}
-	*(newStr + i) = '\0';
 	/*return newStr*/
 	return (newStr);
 }
