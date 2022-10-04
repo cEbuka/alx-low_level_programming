@@ -15,13 +15,13 @@ char *_strdup(char *str)
 
 	len = 1;
 	i = 0;
-	while(str[len])
+	while (str[len])
 		len++;
 	/*check if str is null*/
 	if (str == NULL)
 		return (NULL);
 	/* allocate memory for newStr */
-	newStr = malloc(sizeof(str) * (len + 1));
+	newStr = malloc(sizeof(str) * len + 1);
 	/* check if newStr is null */
 	if (newStr == NULL)
 		return (NULL);
@@ -31,7 +31,7 @@ char *_strdup(char *str)
 		*(newStr + i) = *(str + i);
 		i++;
 	}
-	/* assign 0 to last item of newStr */
+	
 	/*return newStr*/
 	return (newStr);
 }
