@@ -11,17 +11,27 @@ char *_strdup(char *str)
 {
 	char *newStr;
 	unsigned int i;
+	unsigned int len;
 
+	len = 1;
 	i = 0;
+	while(str[len])
+		len++;
+	/*check if str is null*/
 	if (str == NULL)
 		return (NULL);
-	newStr = malloc(sizeof(str));
+	/* allocate memory for newStr */
+	newStr = malloc(sizeof(str) * (len + 1));
+	/* check if newStr is null */
 	if (newStr == NULL)
 		return (NULL);
-	while (i < sizeof(str))
+	/* loop through str and assign to newStr */
+	while (i < len)
 	{
 		*(newStr + i) = *(str + i);
 		i++;
 	}
+	/* assign 0 to last item of newStr */
+	/*return newStr*/
 	return (newStr);
 }
