@@ -1,6 +1,19 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
+/**
+ * struct printer - stores symbol and print function match
+ * @symbol: symbol of format
+ * @print: prints symbol
+ */
+
+typedef struct printer
+{
+	char *symbol;
+	void(*print)(args);
+}
+printer_t;
+
 #include <stdarg.h>
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
